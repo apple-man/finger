@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "TabBarVC.h"
+#import "UserInfo.h"
+#import "BATouchIDLoginVC.h"
+#import "StartVC.h"
 
 @interface AppDelegate ()
 
@@ -17,10 +20,22 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    TabBarVC *tabVC = [[TabBarVC alloc] init];
-    self.window.rootViewController = tabVC;
-    self.tabVC = tabVC;
+    StartVC *startVC = [[StartVC alloc] init];
+    self.window.rootViewController = startVC;
     [self.window makeKeyAndVisible];
+    if ([UserInfo sharedInstance].isOpenTouchID) {
+        BATouchIDLoginVC *vc = [[BATouchIDLoginVC alloc] init];
+//        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+
+        [self.window.rootViewController presentViewController:vc animated:YES completion:nil];
+//        [[UIApplication sharedApplication].windows lastObject].rootViewController = nav;
+    } else {
+        TabBarVC *tabVC = [[TabBarVC alloc] init];
+        self.window.rootViewController = tabVC;
+        self.tabVC = tabVC;
+        [self.window makeKeyAndVisible];
+
+    }
 
     return YES;
 }

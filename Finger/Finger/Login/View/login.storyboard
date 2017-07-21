@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -82,7 +82,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="password" translatesAutoresizingMaskIntoConstraints="NO" id="I3K-h1-Im0">
                                 <rect key="frame" x="65" y="244.5" width="13" height="17"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maP-Bf-ekV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maP-Bf-ekV">
                                 <rect key="frame" x="50" y="295" width="275" height="45"/>
                                 <color key="backgroundColor" red="0.21176470589999999" green="0.49019607840000001" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -101,6 +101,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickLogin:" destination="PT1-Sa-Qy2" eventType="touchUpInside" id="v8L-92-HdR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="482-9H-mpO" userLabel="指纹识别">
                                 <rect key="frame" x="50" y="355" width="275" height="45"/>
@@ -181,19 +184,19 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="SVs-bI-Mvh"/>
-                                <exclude reference="SL6-J9-5T3"/>
                                 <exclude reference="Bbb-Xs-Wx8"/>
                                 <exclude reference="J15-Nn-R0v"/>
-                                <exclude reference="t2I-AH-kYL"/>
+                                <exclude reference="SL6-J9-5T3"/>
+                                <exclude reference="SVs-bI-Mvh"/>
                                 <exclude reference="5NS-aE-tR9"/>
                                 <exclude reference="nqV-En-F5a"/>
+                                <exclude reference="t2I-AH-kYL"/>
                                 <exclude reference="PTt-IY-nBl"/>
-                                <exclude reference="iLy-gU-rNA"/>
-                                <exclude reference="ho2-D9-97U"/>
-                                <exclude reference="qWL-NI-35V"/>
-                                <exclude reference="oah-5Z-vmn"/>
                                 <exclude reference="YQY-XI-J34"/>
+                                <exclude reference="ho2-D9-97U"/>
+                                <exclude reference="iLy-gU-rNA"/>
+                                <exclude reference="oah-5Z-vmn"/>
+                                <exclude reference="qWL-NI-35V"/>
                                 <exclude reference="r4r-L1-d1y"/>
                             </mask>
                         </variation>

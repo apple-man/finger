@@ -8,6 +8,7 @@
 
 #import "LoginVC.h"
 #import <LocalAuthentication/LocalAuthentication.h>
+#import "UserInfo.h"
 
 @interface LoginVC ()<UITextFieldDelegate>
 
@@ -176,24 +177,28 @@
 - (IBAction)clickLogin:(UIButton *)sender {
     [self.view endEditing:YES];
     
-    if (self.passEdit.text.length == 0) {
-        
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(CKKShowMessageTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.passEdit becomeFirstResponder];
-        });
-        
-        return;
-    }
-    if (self.passEdit.text.length == 0) {
-        
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(CKKShowMessageTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.passEdit becomeFirstResponder];
-        });
-        
-        return;
-    }
-    
-    // 保存数据
+    UserInfo *userInfo = [UserInfo sharedInstance];
+    userInfo.isLogin = YES;
+    [UserInfo insert:userInfo];
+    [self dismissViewControllerAnimated:YES completion:nil];
+//    if (self.passEdit.text.length == 0) {
+//        
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            [self.passEdit becomeFirstResponder];
+//        });
+//        
+//        return;
+//    }
+//    if (self.passEdit.text.length == 0) {
+//        
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            [self.passEdit becomeFirstResponder];
+//        });
+//        
+//        return;
+//    }
+//    
+//    // 保存数据
     
 }
 

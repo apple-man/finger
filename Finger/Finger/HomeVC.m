@@ -7,6 +7,8 @@
 //
 
 #import "HomeVC.h"
+#import "UserInfo.h"
+#import "LoginVC.h"
 
 @interface HomeVC ()
 
@@ -16,7 +18,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    
+    //由storyboard根据myView的storyBoardID来获取我们要切换的视图
+    if (![UserInfo sharedInstance].isLogin) {
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"login" bundle:nil];
+
+        LoginVC *loginVC = [sb instantiateViewControllerWithIdentifier:@"LoginVC"];
+        [self presentViewController:loginVC animated:YES completion:nil];
+    }
+   
 }
 
 @end

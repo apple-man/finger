@@ -147,6 +147,10 @@
         }
         else
         {
+//            TabBarVC *tabVC = [[TabBarVC alloc] init];
+//            self.window.rootViewController = tabVC;
+//            self.tabVC = tabVC;
+//            [self.window makeKeyAndVisible];
 
             [self dismissViewControllerAnimated:NO completion:nil];
         }

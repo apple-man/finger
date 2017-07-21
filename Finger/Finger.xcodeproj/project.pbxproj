@@ -44,6 +44,13 @@
 		24ECF26E1F21C7D000D2BD9D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24ECF26D1F21C7D000D2BD9D /* ViewController.m */; };
 		24ECF2751F21C85400D2BD9D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24ECF2731F21C85400D2BD9D /* LoginViewController.m */; };
 		24ECF2761F21C85400D2BD9D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24ECF2741F21C85400D2BD9D /* LoginViewController.xib */; };
+		24ECF2791F21E93100D2BD9D /* StartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24ECF2781F21E93100D2BD9D /* StartVC.m */; };
+		24ECF2801F21EA4700D2BD9D /* startAsset_640x960@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24ECF27A1F21EA4700D2BD9D /* startAsset_640x960@2x.png */; };
+		24ECF2811F21EA4700D2BD9D /* startAsset_640x1136@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24ECF27B1F21EA4700D2BD9D /* startAsset_640x1136@2x.png */; };
+		24ECF2821F21EA4700D2BD9D /* startAsset_750x1334@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24ECF27C1F21EA4700D2BD9D /* startAsset_750x1334@2x.png */; };
+		24ECF2831F21EA4700D2BD9D /* startAsset_768x1024@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24ECF27D1F21EA4700D2BD9D /* startAsset_768x1024@1x.png */; };
+		24ECF2841F21EA4700D2BD9D /* startAsset_1242x2208@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24ECF27E1F21EA4700D2BD9D /* startAsset_1242x2208@3x.png */; };
+		24ECF2851F21EA4700D2BD9D /* startAsset_1536x2048@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24ECF27F1F21EA4700D2BD9D /* startAsset_1536x2048@2x.png */; };
 		532C8D201F21DFA500E3ADDD /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 532C8D1C1F21DFA500E3ADDD /* LoginVC.m */; };
 		532C8D211F21DFA500E3ADDD /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 532C8D1F1F21DFA500E3ADDD /* login.storyboard */; };
 /* End PBXBuildFile section */
@@ -140,6 +147,14 @@
 		24ECF2721F21C85400D2BD9D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		24ECF2731F21C85400D2BD9D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		24ECF2741F21C85400D2BD9D /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		24ECF2771F21E93100D2BD9D /* StartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartVC.h; sourceTree = "<group>"; };
+		24ECF2781F21E93100D2BD9D /* StartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartVC.m; sourceTree = "<group>"; };
+		24ECF27A1F21EA4700D2BD9D /* startAsset_640x960@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startAsset_640x960@2x.png"; sourceTree = "<group>"; };
+		24ECF27B1F21EA4700D2BD9D /* startAsset_640x1136@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startAsset_640x1136@2x.png"; sourceTree = "<group>"; };
+		24ECF27C1F21EA4700D2BD9D /* startAsset_750x1334@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startAsset_750x1334@2x.png"; sourceTree = "<group>"; };
+		24ECF27D1F21EA4700D2BD9D /* startAsset_768x1024@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startAsset_768x1024@1x.png"; sourceTree = "<group>"; };
+		24ECF27E1F21EA4700D2BD9D /* startAsset_1242x2208@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startAsset_1242x2208@3x.png"; sourceTree = "<group>"; };
+		24ECF27F1F21EA4700D2BD9D /* startAsset_1536x2048@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startAsset_1536x2048@2x.png"; sourceTree = "<group>"; };
 		532C8D1B1F21DFA500E3ADDD /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
 		532C8D1C1F21DFA500E3ADDD /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		532C8D1F1F21DFA500E3ADDD /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
@@ -202,6 +217,8 @@
 				24ECF21A1F21ADDC00D2BD9D /* UserInfo.m */,
 				24DA46471F20B3A9000AAAFD /* AppDelegate.h */,
 				24DA46481F20B3AA000AAAFD /* AppDelegate.m */,
+				24ECF2771F21E93100D2BD9D /* StartVC.h */,
+				24ECF2781F21E93100D2BD9D /* StartVC.m */,
 				24ECF1F41F21903F00D2BD9D /* TabBarVC.h */,
 				24ECF1F51F21903F00D2BD9D /* TabBarVC.m */,
 				24ECF2101F21A06500D2BD9D /* MainNavigationVC.h */,
@@ -218,6 +235,12 @@
 				24ECF2731F21C85400D2BD9D /* LoginViewController.m */,
 				24ECF2741F21C85400D2BD9D /* LoginViewController.xib */,
 				24DA464D1F20B3AA000AAAFD /* Main.storyboard */,
+				24ECF27A1F21EA4700D2BD9D /* startAsset_640x960@2x.png */,
+				24ECF27B1F21EA4700D2BD9D /* startAsset_640x1136@2x.png */,
+				24ECF27C1F21EA4700D2BD9D /* startAsset_750x1334@2x.png */,
+				24ECF27D1F21EA4700D2BD9D /* startAsset_768x1024@1x.png */,
+				24ECF27E1F21EA4700D2BD9D /* startAsset_1242x2208@3x.png */,
+				24ECF27F1F21EA4700D2BD9D /* startAsset_1536x2048@2x.png */,
 				24DA46501F20B3AA000AAAFD /* Assets.xcassets */,
 				24DA46521F20B3AA000AAAFD /* LaunchScreen.storyboard */,
 				24DA46551F20B3AA000AAAFD /* Info.plist */,
@@ -560,8 +583,14 @@
 				24ECF25E1F21B59300D2BD9D /* CLLockVC.xib in Resources */,
 				24DA46511F20B3AA000AAAFD /* Assets.xcassets in Resources */,
 				24ECF2161F21A56F00D2BD9D /* HomeVC.storyboard in Resources */,
+				24ECF2851F21EA4700D2BD9D /* startAsset_1536x2048@2x.png in Resources */,
 				24ECF2761F21C85400D2BD9D /* LoginViewController.xib in Resources */,
+				24ECF2811F21EA4700D2BD9D /* startAsset_640x1136@2x.png in Resources */,
 				24DA464F1F20B3AA000AAAFD /* Main.storyboard in Resources */,
+				24ECF2801F21EA4700D2BD9D /* startAsset_640x960@2x.png in Resources */,
+				24ECF2821F21EA4700D2BD9D /* startAsset_750x1334@2x.png in Resources */,
+				24ECF2831F21EA4700D2BD9D /* startAsset_768x1024@1x.png in Resources */,
+				24ECF2841F21EA4700D2BD9D /* startAsset_1242x2208@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,6 +638,7 @@
 				24ECF20C1F219E8000D2BD9D /* HomeVC.m in Sources */,
 				24ECF25B1F21B59300D2BD9D /* NSString+BAKit.m in Sources */,
 				24ECF2601F21B59300D2BD9D /* CoreArchive.m in Sources */,
+				24ECF2791F21E93100D2BD9D /* StartVC.m in Sources */,
 				24ECF25A1F21B59300D2BD9D /* NSObject+BARunTime.m in Sources */,
 				24ECF2581F21B59300D2BD9D /* UIButton+BAKit.m in Sources */,
 				24DA46461F20B3A9000AAAFD /* main.m in Sources */,
