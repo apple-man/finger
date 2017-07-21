@@ -18,17 +18,36 @@
 
 @implementation AppDelegate
 
+#pragma mark - 单例
+static id _instance;
++ (instancetype)allocWithZone:(struct _NSZone *)zone {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = [super allocWithZone:zone];
+    });
+    
+    return _instance;
+}
+
++ (instancetype)sharedInstance {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = [[self alloc] init];
+    });
+    
+    return _instance;
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.isFirst = YES;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enter) name:@"dismiss" object:nil];
     StartVC *startVC = [[StartVC alloc] init];
     self.window.rootViewController = startVC;
     [self.window makeKeyAndVisible];
     if ([UserInfo sharedInstance].isOpenTouchID) {
         BATouchIDLoginVC *vc = [[BATouchIDLoginVC alloc] init];
-//        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-
         [self.window.rootViewController presentViewController:vc animated:YES completion:nil];
-//        [[UIApplication sharedApplication].windows lastObject].rootViewController = nav;
     } else {
         TabBarVC *tabVC = [[TabBarVC alloc] init];
         self.window.rootViewController = tabVC;
@@ -40,6 +59,14 @@
     return YES;
 }
 
+- (void)enter {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [AppDelegate sharedInstance].isFirst = NO;
+    TabBarVC *tabVC = [[TabBarVC alloc] init];
+    self.window.rootViewController = tabVC;
+    self.tabVC = tabVC;
+    [self.window makeKeyAndVisible];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

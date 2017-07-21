@@ -12,7 +12,6 @@
 
 /** 是否已经登录*/
 @property (nonatomic, assign) BOOL isLogin;
-
 /** 是否开启指纹解锁*/
 @property (nonatomic, assign) BOOL isOpenTouchID;
 

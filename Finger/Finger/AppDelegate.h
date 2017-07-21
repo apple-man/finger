@@ -13,6 +13,12 @@
 @property (strong, nonatomic) UIWindow *window;
 /** tabVC */
 @property (nonatomic, weak) UITabBarController *tabVC;
+@property (nonatomic, assign) BOOL isFirst;
+
+/**
+ *  单例
+ */
++ (instancetype)sharedInstance;
 
 
 @end

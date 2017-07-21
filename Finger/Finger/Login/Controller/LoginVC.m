@@ -76,6 +76,7 @@
  */
 - (IBAction)btnCheck:(UIButton *)sender {
 
+    
     [self.phoneEdit resignFirstResponder];
     [self.passEdit resignFirstResponder];
     // 实例化本地身份验证上下文
@@ -89,6 +90,11 @@
                           if (success) {
                               
                               [self refreshUI:[NSString stringWithFormat:@"指纹验证成功"] message:nil];
+                              UserInfo *userInfo = [UserInfo sharedInstance];
+                              userInfo.isLogin = YES;
+                              userInfo.isOpenTouchID = YES;
+                              [UserInfo insert:userInfo];
+                              [self dismissViewControllerAnimated:YES completion:nil];
                               
                           } else {
                               
@@ -113,9 +119,7 @@
             
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [alert dismissViewControllerAnimated:YES completion:^(void){
-                    
-                    [self.navigationController popViewControllerAnimated:NO];
-                    
+                    [self dismissViewControllerAnimated:YES completion:nil];
                 }];
                 
             });

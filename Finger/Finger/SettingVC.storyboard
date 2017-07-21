@@ -54,6 +54,9 @@
                             <constraint firstItem="MPk-l0-w8w" firstAttribute="top" secondItem="xBH-Xz-O5u" secondAttribute="bottom" id="nbp-Pa-ecJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="touchSwitchBtn" destination="Edh-F7-z49" id="enp-Ne-fFu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mpu-nE-7EY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

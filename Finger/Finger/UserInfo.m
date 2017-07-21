@@ -35,24 +35,16 @@ NSString *const KUserIsOpenTouchID = @"userIsOpenTouchID";
     return self;
 }
 
-+ (void)exitLogin {
-    [[self sharedInstance] removeUserInfoFromUserDefault];
-}
-
 + (void)insert:(UserInfo *)userInfo {
     
     [[self sharedInstance] storeUserInfoToUserDefault];
-}
-
-+ (void)delete:(UserInfo *)userInfo {
-    
-    [[self sharedInstance] removeUserInfoFromUserDefault];
 }
 
 - (void)storeUserInfoToUserDefault {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setBool:self.isLogin forKey:KUserIsLogin];
     [userDefaults setBool:self.isOpenTouchID forKey:KUserIsOpenTouchID];
+    [userDefaults synchronize];
 }
 
 - (void)removeUserInfoFromUserDefault {
@@ -61,6 +53,17 @@ NSString *const KUserIsOpenTouchID = @"userIsOpenTouchID";
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults removeObjectForKey:KUserIsLogin];
     [userDefaults removeObjectForKey:KUserIsOpenTouchID];
+    [userDefaults synchronize];
 }
+
++ (void)exitLogin {
+    [[self sharedInstance] removeUserInfoFromUserDefault];
+}
+
++ (void)delete:(UserInfo *)userInfo {
+    
+    [[self sharedInstance] removeUserInfoFromUserDefault];
+}
+
 
 @end

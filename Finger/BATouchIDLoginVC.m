@@ -13,6 +13,7 @@
 #import "ViewController.h"
 #import "CLLockVC.h"
 #import "UserInfo.h"
+#import "AppDelegate.h"
 
 @interface BATouchIDLoginVC ()
 
@@ -75,6 +76,9 @@
         if (touchIDType == BAKit_TouchIDTypeSuccess)
         {
             BAKit_ShowAlertWithMsg(@"指纹验证成功！");
+            if ([AppDelegate sharedInstance].isFirst) {
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"dismiss" object:nil];
+            }
             [self ba_backToPreVC:nil];
         }
         if (touchIDType == BAKit_TouchIDTypeInputPassword)
