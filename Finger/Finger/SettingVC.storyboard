@@ -24,8 +24,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MPk-l0-w8w">
                                 <rect key="frame" x="0.0" y="20" width="375" height="45"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开启指纹解锁" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5k-LT-0bz">
-                                        <rect key="frame" x="15" y="12" width="104" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="指纹登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5k-LT-0bz">
+                                        <rect key="frame" x="15" y="12" width="69.5" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -33,7 +33,7 @@
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Edh-F7-z49">
                                         <rect key="frame" x="311" y="7" width="51" height="31"/>
                                         <connections>
-                                            <action selector="clickSwitch:" destination="TCN-qM-6Yp" eventType="valueChanged" id="B0F-CM-wUD"/>
+                                            <action selector="clickTouchSwitch:" destination="TCN-qM-6Yp" eventType="valueChanged" id="G0r-5n-dMJ"/>
                                         </connections>
                                     </switch>
                                 </subviews>
@@ -46,10 +46,40 @@
                                     <constraint firstAttribute="height" constant="45" id="f23-xw-SsG"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y8C-6K-XLa">
+                                <rect key="frame" x="0.0" y="65" width="375" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手势登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmM-Ec-QUa">
+                                        <rect key="frame" x="15" y="12.5" width="69.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhp-8X-xwt">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                                        <connections>
+                                            <action selector="clickGestureBtn:" destination="TCN-qM-6Yp" eventType="touchUpInside" id="Jlc-Tc-xMZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="nhp-8X-xwt" secondAttribute="trailing" id="7bR-HE-h7S"/>
+                                    <constraint firstItem="gmM-Ec-QUa" firstAttribute="centerY" secondItem="y8C-6K-XLa" secondAttribute="centerY" id="AW1-XF-zEy"/>
+                                    <constraint firstItem="nhp-8X-xwt" firstAttribute="leading" secondItem="y8C-6K-XLa" secondAttribute="leading" id="M72-gM-lKA"/>
+                                    <constraint firstItem="nhp-8X-xwt" firstAttribute="top" secondItem="y8C-6K-XLa" secondAttribute="top" id="SdT-X4-HgC"/>
+                                    <constraint firstAttribute="bottom" secondItem="nhp-8X-xwt" secondAttribute="bottom" id="f0a-C0-yE4"/>
+                                    <constraint firstAttribute="height" constant="45" id="n6m-qy-Wh7"/>
+                                    <constraint firstItem="gmM-Ec-QUa" firstAttribute="leading" secondItem="y8C-6K-XLa" secondAttribute="leading" constant="15" id="pll-mq-DbT"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="y8C-6K-XLa" firstAttribute="top" secondItem="MPk-l0-w8w" secondAttribute="bottom" id="AkW-7O-Huc"/>
                             <constraint firstAttribute="trailing" secondItem="MPk-l0-w8w" secondAttribute="trailing" id="JvF-P1-Iy5"/>
+                            <constraint firstItem="y8C-6K-XLa" firstAttribute="leading" secondItem="B4f-nO-5g5" secondAttribute="leading" id="LVV-BL-5Te"/>
+                            <constraint firstAttribute="trailing" secondItem="y8C-6K-XLa" secondAttribute="trailing" id="U6t-RO-UXb"/>
                             <constraint firstItem="MPk-l0-w8w" firstAttribute="leading" secondItem="B4f-nO-5g5" secondAttribute="leading" id="lX8-AB-GXo"/>
                             <constraint firstItem="MPk-l0-w8w" firstAttribute="top" secondItem="xBH-Xz-O5u" secondAttribute="bottom" id="nbp-Pa-ecJ"/>
                         </constraints>

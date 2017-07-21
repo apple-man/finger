@@ -14,6 +14,8 @@
 @property (nonatomic, assign) BOOL isLogin;
 /** 是否开启指纹解锁*/
 @property (nonatomic, assign) BOOL isOpenTouchID;
+/** 是否开启手势密码*/
+@property (nonatomic, assign) BOOL isOpenGesturePwd;
 
 /**
  *  单例

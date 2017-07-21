@@ -10,6 +10,9 @@
 
 NSString *const KUserIsLogin = @"userIsLogin";
 NSString *const KUserIsOpenTouchID = @"userIsOpenTouchID";
+NSString *const KUserisOpenGesturePwd = @"userisOpenGesturePwd";
+
+
 
 @implementation UserInfo
 
@@ -28,8 +31,9 @@ NSString *const KUserIsOpenTouchID = @"userIsOpenTouchID";
     self = [super init];
     if (self) {
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        self.isOpenTouchID = [userDefaults objectForKey:KUserIsOpenTouchID];
         self.isLogin = [userDefaults objectForKey:KUserIsLogin];
+        self.isOpenTouchID = [userDefaults objectForKey:KUserIsOpenTouchID];
+         self.isOpenGesturePwd = [userDefaults objectForKey:KUserisOpenGesturePwd];
     }
     
     return self;
@@ -44,15 +48,18 @@ NSString *const KUserIsOpenTouchID = @"userIsOpenTouchID";
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setBool:self.isLogin forKey:KUserIsLogin];
     [userDefaults setBool:self.isOpenTouchID forKey:KUserIsOpenTouchID];
+    [userDefaults setBool:self.isOpenGesturePwd forKey:KUserisOpenGesturePwd];
     [userDefaults synchronize];
 }
 
 - (void)removeUserInfoFromUserDefault {
     self.isLogin = NO;
     self.isOpenTouchID = NO;
+    self.isOpenGesturePwd = NO;
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults removeObjectForKey:KUserIsLogin];
     [userDefaults removeObjectForKey:KUserIsOpenTouchID];
+    [userDefaults removeObjectForKey:KUserisOpenGesturePwd];
     [userDefaults synchronize];
 }
 
