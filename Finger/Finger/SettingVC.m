@@ -14,6 +14,15 @@
 #import "BATouchIDLoginVC.h"
 #import "BAUnlockedGestureVC.h"
 
+#define kIsLogin                  @"kIsLogin"
+#define kIsOpenTouchID            @"kIsOpenTouchID"
+#define kIsOpenUnlockedGesture    @"kIsOpenUnlockedGesture"
+
+#define kLastEnterBackgroundDate  @"kLastEnterBackgroundDate"
+
+#define kUserDefaults [NSUserDefaults standardUserDefaults]
+
+
 
 @interface SettingVC ()
 
@@ -92,6 +101,7 @@
                 UserInfo *userInfo = [UserInfo sharedInstance];
                 userInfo.isOpenTouchID = YES;
                 [UserInfo insert:userInfo];
+                [[NSUserDefaults standardUserDefaults] removeObjectForKey:kIsOpenUnlockedGesture];
                 [self presentViewController:[BATouchIDLoginVC new] animated:YES completion:nil];
             }
 //            id isShow = [kUserDefaults objectForKey:kIsOpenTouchID];

@@ -196,6 +196,7 @@
 				24ECF2691F21C51500D2BD9D /* BATouchIDLoginVC.h */,
 				24ECF26A1F21C51500D2BD9D /* BATouchIDLoginVC.m */,
 				24ECF2271F21B59300D2BD9D /* Lib */,
+				532C8D191F21DFA500E3ADDD /* Login */,
 				24ECF21C1F21B53900D2BD9D /* BATouchID */,
 				24DA46431F20B3A9000AAAFD /* Finger */,
 				24DA465D1F20B3AA000AAAFD /* FingerTests */,
@@ -220,7 +221,6 @@
 				24ECF28B1F22152900D2BD9D /* BAUnlockedGestureVC.h */,
 				24ECF28C1F22152900D2BD9D /* BAUnlockedGestureVC.m */,
 				24ECF28D1F22152900D2BD9D /* BAUnlockedGestureVC.xib */,
-				532C8D191F21DFA500E3ADDD /* Login */,
 				24ECF2191F21ADDC00D2BD9D /* UserInfo.h */,
 				24ECF21A1F21ADDC00D2BD9D /* UserInfo.m */,
 				24DA46471F20B3A9000AAAFD /* AppDelegate.h */,
@@ -449,7 +449,8 @@
 				532C8D1D1F21DFA500E3ADDD /* Model */,
 				532C8D1E1F21DFA500E3ADDD /* View */,
 			);
-			path = Login;
+			name = Login;
+			path = Finger/Login;
 			sourceTree = "<group>";
 		};
 		532C8D1A1F21DFA500E3ADDD /* Controller */ = {
@@ -806,6 +807,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 27B5KQESXZ;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Finger/PrefixHeader.pch";
 				INFOPLIST_FILE = Finger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = qyd.Finger;
@@ -818,6 +821,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 27B5KQESXZ;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Finger/PrefixHeader.pch";
 				INFOPLIST_FILE = Finger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = qyd.Finger;

@@ -11,14 +11,6 @@
 #import "UIAlertController+Blocks.h"
 #import "UserInfo.h"
 
-#define kIsLogin                  @"kIsLogin"
-#define kIsOpenTouchID            @"kIsOpenTouchID"
-#define kIsOpenUnlockedGesture    @"kIsOpenUnlockedGesture"
-
-#define kLastEnterBackgroundDate  @"kLastEnterBackgroundDate"
-
-#define kUserDefaults [NSUserDefaults standardUserDefaults]
-
 static NSString * const kCellID = @"BAUnlockedGestureVCCell";
 
 @interface BAUnlockedGestureVC ()<UITableViewDelegate, UITableViewDataSource>

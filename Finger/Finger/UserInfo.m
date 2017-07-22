@@ -31,9 +31,9 @@ NSString *const KUserisOpenGesturePwd = @"userisOpenGesturePwd";
     self = [super init];
     if (self) {
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        self.isLogin = [userDefaults objectForKey:KUserIsLogin];
-        self.isOpenTouchID = [userDefaults objectForKey:KUserIsOpenTouchID];
-         self.isOpenGesturePwd = [userDefaults objectForKey:KUserisOpenGesturePwd];
+        self.isLogin = [[userDefaults objectForKey:KUserIsLogin] integerValue];
+        self.isOpenTouchID = [[userDefaults objectForKey:KUserIsOpenTouchID] integerValue];
+         self.isOpenGesturePwd = [[userDefaults objectForKey:KUserisOpenGesturePwd] integerValue];
     }
     
     return self;

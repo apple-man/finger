@@ -6,7 +6,6 @@
 //  Copyright © 2017年 qyd. All rights reserved.
 //
 
-#import "BMBaseVC.h"
 
 /** 自定义颜色 */
 #define WJRGBAColor(r, g, b, a) [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:(a)]
@@ -23,6 +22,10 @@
 #define kLastEnterBackgroundDate  @"kLastEnterBackgroundDate"
 
 #define kUserDefaults [NSUserDefaults standardUserDefaults]
+
+#import "UIAlertController+Blocks.h"
+#import "UserInfo.h"
+
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.

@@ -73,7 +73,8 @@
     self.tabBar.itemWidth = [UIScreen mainScreen].bounds.size.width * 0.25;
     self.tabBar.itemSpacing = 0;
     //设置tabbar底部背景色
-    [self.tabBar setBackgroundImage:[self createImageWithColor:[UIColor whiteColor]]];
+//    [self.tabBar setBackgroundImage:[self createImageWithColor:[UIColor whiteColor]]];
+    [self.tabBar setBackgroundImage:[self createImageWithColor:WJRGBAColor(252, 252, 252, 1.0)]];
     
     return vc;
 }
